@@ -1,28 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClientService } from '../service/http-client.service';
 
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
   styleUrls: ['./employee.component.css']
 })
-  export class EmployeeComponent implements OnInit {
+export class Employee implements OnInit {
+  
+  private id: number;
+  private  name: string;
+  private  salary: string;
+  private  department: string;
+  
+  constructor() {}
 
-    employees:string[];
-     
-    constructor(
-      private httpClientService:HttpClientService
-    ) { }
-  
-    ngOnInit() {
-      this.httpClientService.getEmployee().subscribe(
-       response =>this.handleSuccessfulResponse(response),
-      );
-    }
-  
-  handleSuccessfulResponse(response)
-  {
-      this.employees=response;
+  ngOnInit() {
   }
-  
-  }
+
+}
