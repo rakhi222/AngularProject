@@ -18,6 +18,8 @@ export class EmployeeListComponent implements OnInit {
     this.reloadData();
   }
   reloadData() {
-    this.employees = this.employeeService.getEmployees();
+    this.employeeService.getEmployees().subscribe(
+      response => this.employees = response
+    );
   }
 }
