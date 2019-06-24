@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Employee implements OnInit {
   
-  private id: number;
+  private id: Number;
   private  name: string;
-  private  salary: string;
+  private  salary: Number;
   private  department: string;
   
   constructor() {}
